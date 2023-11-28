@@ -10,7 +10,7 @@ app.use(
   })
 );
 app.get("/", (req, res) => {
-  res.json({ message: "ok" });
+  res.json({ message: "Purdue Northwest campus map api is live - Team C" });
 });
 app.use("/buildings", buildingsRouter);
 app.use("/parkinglots",parkingLots );
