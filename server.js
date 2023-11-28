@@ -4,6 +4,7 @@ const port = 3000;
 const buildingsRouter = require("./routers/buildings");
 const parkingLots = require("./routers/parkingLots");
 const emergencyExits = require("./routers/EmergencyExits");
+const emergencyPoles = require("./routers/EmergencyPoles");
 app.use(express.json());
 app.use(
   express.urlencoded({
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 app.use("/buildings", buildingsRouter);
 app.use("/parkinglots",parkingLots );
 app.use("/emergencyExits",emergencyExits );
+app.use("/emergencyPoles",emergencyPoles );
 /* Error handler middleware */
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
